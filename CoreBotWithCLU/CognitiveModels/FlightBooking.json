@@ -14,7 +14,7 @@
     "assets": {
         "intents": [
             {
-                "category": "BookFlight"
+                "category": "VacationPeriod"
             },
             {
                 "category": "Cancel"
@@ -49,7 +49,7 @@
             {
                 "text": "a flight to Washington from Cairo",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -66,7 +66,7 @@
             {
                 "text": "a ticket to Shanghai from Tokyo",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -83,7 +83,7 @@
             {
                 "text": "To Tokyo from Cairo",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -100,7 +100,7 @@
             {
                 "text": "To London from Paris",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -117,7 +117,7 @@
             {
                 "text": "from Cairo to Barcelona",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -134,7 +134,7 @@
             {
                 "text": "On the third week of February",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "flightDate",
@@ -146,7 +146,7 @@
             {
                 "text": "to New Delhi",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -158,7 +158,7 @@
             {
                 "text": "the source city is New Delhi",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -170,7 +170,7 @@
             {
                 "text": "the destination city is Cairo",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -182,7 +182,7 @@
             {
                 "text": "to London",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -194,7 +194,7 @@
             {
                 "text": "Book a flight on the first of October",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "flightDate",
@@ -206,7 +206,7 @@
             {
                 "text": "Book a flight from Barcelona to London",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -223,7 +223,7 @@
             {
                 "text": "I want a flight on the second of December 2022 ",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "flightDate",
@@ -235,7 +235,7 @@
             {
                 "text": "flight from London",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -247,7 +247,7 @@
             {
                 "text": "ticket to New York",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -259,7 +259,7 @@
             {
                 "text": "I want to book a flight from Cairo to Shanghai on 22/12/2021",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -281,7 +281,7 @@
             {
                 "text": "buy a ticket from new york to london",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -298,7 +298,7 @@
             {
                 "text": "buy a ticket from paris to cairo",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -315,7 +315,7 @@
             {
                 "text": "buy a ticket from cairo to new york",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -332,7 +332,7 @@
             {
                 "text": "book a flight from paris to london",
                 "language": "en-us",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -348,12 +348,12 @@
             },
             {
                 "text": "book a flight",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": []
             },
             {
                 "text": "book a flight from new york",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -364,7 +364,7 @@
             },
             {
                 "text": "book a flight from seattle",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -391,7 +391,7 @@
             },
             {
                 "text": "book flight from london to paris on feb 14th",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -412,7 +412,7 @@
             },
             {
                 "text": "book flight to berlin on feb 14th",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -428,7 +428,7 @@
             },
             {
                 "text": "book me a flight from london to paris",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -464,7 +464,7 @@
             },
             {
                 "text": "flight to paris",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -475,7 +475,7 @@
             },
             {
                 "text": "flight to paris from london on feb 14th",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -496,7 +496,7 @@
             },
             {
                 "text": "fly from berlin to paris on may 5th",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -517,7 +517,7 @@
             },
             {
                 "text": "go to paris",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -528,7 +528,7 @@
             },
             {
                 "text": "going from paris to berlin",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -554,7 +554,7 @@
             },
             {
                 "text": "travel from new york to paris",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "fromCity",
@@ -570,7 +570,7 @@
             },
             {
                 "text": "travel to new york",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
@@ -581,7 +581,7 @@
             },
             {
                 "text": "travel to paris",
-                "intent": "BookFlight",
+                "intent": "VacationPeriod",
                 "entities": [
                     {
                         "category": "toCity",
