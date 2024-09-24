@@ -67,7 +67,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             var cluResult = await _cluRecognizer.RecognizeAsync<HumanResource>(stepContext.Context, cancellationToken);
             switch (cluResult.GetTopIntent().intent)
             {
-                case HumanResource.Intent.BookFlight:
+                case HumanResource.Intent.VacationPeriod:
                     // Initialize BookingDetails with any entities we may have found in the response.
                     var bookingDetails = new BookingDetails()
                     {

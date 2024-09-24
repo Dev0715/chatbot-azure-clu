@@ -17,7 +17,7 @@ namespace Microsoft.BotBuilderSamples
     {
         public enum Intent
         {
-            BookFlight,
+            VacationPeriod,
             Cancel,
             GetWeather,
             None
