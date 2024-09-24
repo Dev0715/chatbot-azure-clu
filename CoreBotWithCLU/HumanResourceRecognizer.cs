@@ -9,11 +9,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace Microsoft.BotBuilderSamples
 {
-    public class FlightBookingRecognizer : IRecognizer
+    public class HumanResourceRecognizer : IRecognizer
     {
         private readonly CluRecognizer _recognizer;
 
-        public FlightBookingRecognizer(IConfiguration configuration)
+        public HumanResourceRecognizer(IConfiguration configuration)
         {
             var cluIsConfigured = !string.IsNullOrEmpty(configuration["CluProjectName"]) && !string.IsNullOrEmpty(configuration["CluDeploymentName"]) && !string.IsNullOrEmpty(configuration["CluAPIKey"]) && !string.IsNullOrEmpty(configuration["CluAPIHostName"]);
             if (cluIsConfigured)

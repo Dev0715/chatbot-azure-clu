@@ -14,11 +14,11 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 {
     public class MainDialog : ComponentDialog
     {
-        private readonly FlightBookingRecognizer _cluRecognizer;
+        private readonly HumanResourceRecognizer _cluRecognizer;
         protected readonly ILogger Logger;
 
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(FlightBookingRecognizer cluRecognizer, BookingDialog bookingDialog, ILogger<MainDialog> logger)
+        public MainDialog(HumanResourceRecognizer cluRecognizer, BookingDialog bookingDialog, ILogger<MainDialog> logger)
             : base(nameof(MainDialog))
         {
             _cluRecognizer = cluRecognizer;
@@ -49,7 +49,8 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
             // Use the text provided in FinalStepAsync or the default if it is the first time.
             var weekLaterDate = DateTime.Now.AddDays(7).ToString("MMMM d, yyyy");
-            var messageText = stepContext.Options?.ToString() ?? $"What can I help you with today?\nSay something like \"Book a flight from Paris to Berlin on {weekLaterDate}\"";
+            // var messageText = stepContext.Options?.ToString() ?? $"What can I help you with today?\nSay something like \"Book a flight from Paris to Berlin on {weekLaterDate}\"";
+            var messageText = stepContext.Options?.ToString() ?? "What can I help you with today?\n\nAsk anything about Human Resource policy of SISU Healthcare Solutions.";
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
         }
@@ -87,7 +88,8 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
                 default:
                     // Catch all for unhandled intents
-                    var didntUnderstandMessageText = $"Sorry, I didn't get that. Please try asking in a different way (intent was {cluResult.GetTopIntent().intent})";
+                    // var didntUnderstandMessageText = $"Sorry, I didn't get that. Please try asking in a different way (intent was {cluResult.GetTopIntent().intent})";
+                    var didntUnderstandMessageText = "Sorry, I am not ready for that question.";
                     var didntUnderstandMessage = MessageFactory.Text(didntUnderstandMessageText, didntUnderstandMessageText, InputHints.IgnoringInput);
                     await stepContext.Context.SendActivityAsync(didntUnderstandMessage, cancellationToken);
                     break;
@@ -114,7 +116,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             }
 
             // Restart the main dialog with a different message the second time around
-            var promptMessage = "What else can I do for you?";
+            var promptMessage = "What other question do you have?";
             return await stepContext.ReplaceDialogAsync(InitialDialogId, promptMessage, cancellationToken);
         }
     }

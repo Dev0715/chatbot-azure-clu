@@ -3,17 +3,19 @@
   "type": "AdaptiveCard",
   "version": "1.0",
   "body": [
+/*
     {
       "type": "Image",
       "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtB3AwMUeNoq4gUBGe6Ocj8kyh3bXa9ZbV7u1fVKQoyKFHdkqU",
       "size": "stretch"
     },
+*/
     {
       "type": "TextBlock",
       "spacing": "medium",
-      "size": "default",
+      "size": "Large",
       "weight": "bolder",
-      "text": "Welcome to Bot Framework!",
+      "text": "Welcome to SISU Healthcare Solutions!",
       "wrap": true,
       "maxLines": 0
     },
@@ -21,7 +23,7 @@
       "type": "TextBlock",
       "size": "default",
       "isSubtle": true,
-      "text": "Now that you have successfully run your bot, follow the links in this Adaptive Card to expand your knowledge of Bot Framework.",
+      "text": "I am ready for your questions about human resources at SISU Healthcare Solutions.",
       "wrap": true,
       "maxLines": 0
     }
@@ -29,9 +31,10 @@
   "actions": [
     {
       "type": "Action.OpenUrl",
-      "title": "Get an overview",
-      "url": "https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0"
+      "title": "Visit SISU Healthcare Solutions",
+      "url": "https://www.sisuhealthcaresolutions.com/"
     },
+/*
     {
       "type": "Action.OpenUrl",
       "title": "Ask a question",
@@ -42,5 +45,6 @@
       "title": "Learn how to deploy",
       "url": "https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-deploy-azure?view=azure-bot-service-4.0"
     }
+*/
   ]
 }
