@@ -18,7 +18,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         protected readonly ILogger Logger;
 
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(HumanResourceRecognizer cluRecognizer, BookingDialog bookingDialog, ILogger<MainDialog> logger)
+        public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog bookingDialog, ILogger<MainDialog> logger)
             : base(nameof(MainDialog))
         {
             _cluRecognizer = cluRecognizer;
@@ -60,7 +60,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             if (!_cluRecognizer.IsConfigured)
             {
                 // CLU is not configured, we just run the BookingDialog path with an empty BookingDetailsInstance.
-                return await stepContext.BeginDialogAsync(nameof(BookingDialog), new BookingDetails(), cancellationToken);
+                return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new BookingDetails(), cancellationToken);
             }
 
             // Call CLU and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
@@ -77,7 +77,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
-                    return await stepContext.BeginDialogAsync(nameof(BookingDialog), bookingDetails, cancellationToken);
+                    return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), bookingDetails, cancellationToken);
 
                 case HumanResource.Intent.GetWeather:
                     // We haven't implemented the GetWeatherDialog so we just display a TODO message.

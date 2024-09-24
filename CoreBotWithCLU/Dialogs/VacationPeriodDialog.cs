@@ -10,13 +10,13 @@ using Microsoft.Recognizers.Text.DataTypes.TimexExpression;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-    public class BookingDialog : CancelAndHelpDialog
+    public class VacationPeriodDialog : CancelAndHelpDialog
     {
         private const string DestinationStepMsgText = "Where would you like to travel to?";
         private const string OriginStepMsgText = "Where are you traveling from?";
 
-        public BookingDialog()
-            : base(nameof(BookingDialog))
+        public VacationPeriodDialog()
+            : base(nameof(VacationPeriodDialog))
         {
             AddDialog(new TextPrompt(nameof(TextPrompt)));
             AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
