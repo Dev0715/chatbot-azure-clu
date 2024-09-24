@@ -18,8 +18,6 @@ namespace Microsoft.BotBuilderSamples
         public enum Intent
         {
             VacationPeriod,
-            Cancel,
-            GetWeather,
             None
         }
 
@@ -65,13 +63,13 @@ namespace Microsoft.BotBuilderSamples
         {
             public CluEntity[] Entities;
 
-            public CluEntity[] GetFromCityList() => Entities.Where(e => e.Category == "fromCity").ToArray();
+            public CluEntity[] GetWorkedYearsList() => Entities.Where(e => e.Category == "fromCity").ToArray();
 
             public CluEntity[] GetToCityList() => Entities.Where(e => e.Category == "toCity").ToArray();
 
             public CluEntity[] GetFlightDateList() => Entities.Where(e => e.Category == "flightDate").ToArray();
 
-            public string GetFromCity() => GetFromCityList().FirstOrDefault()?.Text;
+            public string GetWorkedYears() => GetWorkedYearsList().FirstOrDefault()?.Text;
 
             public string GetToCity() => GetToCityList().FirstOrDefault()?.Text;
 

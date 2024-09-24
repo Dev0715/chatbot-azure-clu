@@ -72,19 +72,12 @@ namespace Microsoft.BotBuilderSamples.Dialogs
                     var bookingDetails = new BookingDetails()
                     {
                         Destination = cluResult.Entities.GetToCity(),
-                        Origin = cluResult.Entities.GetFromCity(),
+                        Origin = cluResult.Entities.GetWorkedYears(),
                         TravelDate = cluResult.Entities.GetFlightDate(),
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
                     return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), bookingDetails, cancellationToken);
-
-                case HumanResource.Intent.GetWeather:
-                    // We haven't implemented the GetWeatherDialog so we just display a TODO message.
-                    var getWeatherMessageText = "TODO: get weather flow here";
-                    var getWeatherMessage = MessageFactory.Text(getWeatherMessageText, getWeatherMessageText, InputHints.IgnoringInput);
-                    await stepContext.Context.SendActivityAsync(getWeatherMessage, cancellationToken);
-                    break;
 
                 default:
                     // Catch all for unhandled intents

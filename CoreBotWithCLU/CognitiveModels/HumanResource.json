@@ -1,0 +1,250 @@
+{
+    "api-version": "2022-03-01-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "conversation",
+        "settings": {
+            "confidenceThreshold": 0
+        },
+        "projectName": "HumanResource",
+        "multilingual": false,
+        "description": "CLU Model for CoreBot",
+        "language": "en-us"
+    },
+    "assets": {
+        "intents": [
+            {
+                "category": "VacationPeriod"
+            },
+            {
+                "category": "None"
+            }
+        ],
+        "entities": [
+            {
+                "category": "workedYears",
+                "compositionSetting": "returnUnion"
+            }
+        ],
+      "utterances": [
+        {
+          "text": "How much vacation time do I get?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "vacation time",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "vacation days",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "How much vacation time can I have?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "How long vacation time do I get",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "What is the vacation policy",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "How many days of vacation can employees take each year?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "What are the rules for taking vacation days?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "rules for taking vacation days?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "rules for vacation days?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "How much leave can I take each year?",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "What is the company’s policy on vacation days",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "policy on vacation days",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": []
+        },
+        {
+          "text": "I have worked 1 year",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 14,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "1 year",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 0,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "I have worked for 5 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 18,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "I have worked for 10 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 18,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "text": "12 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 0,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "text": "More than 5 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 10,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "Around 5 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 7,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "I worked here for 4 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 18,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "I worked here more than 17 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 24,
+              "length": 2
+            }
+          ]
+        },
+        {
+          "text": "About 7 years",
+          "language": "en-us",
+          "intent": "VacationPeriod",
+          "entities": [
+            {
+              "category": "workedYears",
+              "offset": 6,
+              "length": 1
+            }
+          ]
+        },
+        {
+          "text": "book a restaurant",
+          "intent": "None",
+          "entities": []
+        },
+        {
+          "text": "find an airport near me",
+          "intent": "None",
+          "entities": []
+        },
+        {
+          "text": "i'd like to rent a car",
+          "intent": "None",
+          "entities": []
+        },
+        {
+          "text": "winter is coming",
+          "intent": "None",
+          "entities": []
+        }
+      ]
+    }
+}

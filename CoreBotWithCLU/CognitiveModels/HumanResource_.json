@@ -6,7 +6,7 @@
         "settings": {
             "confidenceThreshold": 0
         },
-        "projectName": "FlightBooking",
+        "projectName": "HumanResource",
         "multilingual": false,
         "description": "CLU Model for CoreBot",
         "language": "en-us"
