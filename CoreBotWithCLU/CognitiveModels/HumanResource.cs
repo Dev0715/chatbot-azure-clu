@@ -13,7 +13,7 @@ namespace Microsoft.BotBuilderSamples
     /// An <see cref="IRecognizerConvert"/> implementation that provides helper methods and properties to interact with
     /// the CLU recognizer results.
     /// </summary>
-    public class FlightBooking : IRecognizerConvert
+    public class HumanResource : IRecognizerConvert
     {
         public enum Intent
         {
@@ -36,7 +36,7 @@ namespace Microsoft.BotBuilderSamples
         public void Convert(dynamic result)
         {
             var jsonResult = JsonConvert.SerializeObject(result, new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
-            var app = JsonConvert.DeserializeObject<FlightBooking>(jsonResult);
+            var app = JsonConvert.DeserializeObject<HumanResource>(jsonResult);
 
             Text = app.Text;
             AlteredText = app.AlteredText;
