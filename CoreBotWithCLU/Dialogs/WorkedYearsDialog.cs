@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,13 +14,17 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 {
   public class WorkedYearsDialog : CancelAndHelpDialog
   {
-    private const string PromptMsgText = "When would you like to travel?";
-    private const string RepromptMsgText = "I'm sorry, to make your booking please enter a full travel date including Day Month and Year.";
+    private readonly HumanResourceRecognizer _cluRecognizer;
 
-    public WorkedYearsDialog(string id = null)
-        : base(id ?? nameof(WorkedYearsDialog))
+    private const string PromptMsgText = "How long have you worked at Sisu?";
+    private const string RePromptMsgText = "I am sorry, could you please enter the number of years you have worked here?";
+
+    public WorkedYearsDialog(HumanResourceRecognizer cluRecognizer)
+        : base(nameof(WorkedYearsDialog))
     {
-      AddDialog(new DateTimePrompt(nameof(DateTimePrompt), DateTimePromptValidator));
+      _cluRecognizer = cluRecognizer;
+
+      AddDialog(new TextPrompt(nameof(TextPrompt), TextPromptValidator));
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
                 InitialStepAsync,
@@ -32,58 +37,36 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
     private async Task<DialogTurnResult> InitialStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
-      var timex = (string)stepContext.Options;
+      var years = (string)stepContext.Options;
 
       var promptMessage = MessageFactory.Text(PromptMsgText, PromptMsgText, InputHints.ExpectingInput);
-      var repromptMessage = MessageFactory.Text(RepromptMsgText, RepromptMsgText, InputHints.ExpectingInput);
+      var rePromptMessage = MessageFactory.Text(RePromptMsgText, RePromptMsgText, InputHints.ExpectingInput);
 
-      if (timex == null)
+      if (years == null)
       {
-        // We were not given any date at all so prompt the user.
-        return await stepContext.PromptAsync(nameof(DateTimePrompt),
+        return await stepContext.PromptAsync(nameof(TextPrompt),
             new PromptOptions
             {
               Prompt = promptMessage,
-              RetryPrompt = repromptMessage,
+              RetryPrompt = rePromptMessage,
             }, cancellationToken);
       }
 
-      // We have a Date we just need to check it is unambiguous.
-      // This is disabled for now since Resolution is not yet included in CLU response.
-
-      //var timexProperty = new TimexProperty(timex);
-      //if (!timexProperty.Types.Contains(Constants.TimexTypes.Definite))
-      //{
-      //    // This is essentially a "reprompt" of the data we were given up front.
-      //    return await stepContext.PromptAsync(nameof(DateTimePrompt),
-      //        new PromptOptions
-      //        {
-      //            Prompt = repromptMessage,
-      //        }, cancellationToken);
-      //}
-
-      return await stepContext.NextAsync(new List<DateTimeResolution> { new DateTimeResolution { Timex = timex } }, cancellationToken);
+      return await stepContext.NextAsync(years, cancellationToken);
     }
 
     private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
-      var timex = ((List<DateTimeResolution>)stepContext.Result)[0].Timex;
-      return await stepContext.EndDialogAsync(timex, cancellationToken);
+      var years = ((string)stepContext.Result);
+      return await stepContext.EndDialogAsync(years, cancellationToken);
     }
 
-    private static Task<bool> DateTimePromptValidator(PromptValidatorContext<IList<DateTimeResolution>> promptContext, CancellationToken cancellationToken)
+    private static Task<bool> TextPromptValidator(PromptValidatorContext<string> promptContext, CancellationToken cancellationToken)
     {
       if (promptContext.Recognized.Succeeded)
       {
-        // This value will be a TIMEX. And we are only interested in a Date so grab the first result and drop the Time part.
-        // TIMEX is a format that represents DateTime expressions that include some ambiguity. e.g. missing a Year.
-        var timex = promptContext.Recognized.Value[0].Timex.Split('T')[0];
-
-        // If this is a definite Date including year, month and day we are good otherwise reprompt.
-        // A better solution might be to let the user know what part is actually missing.
-        var isDefinite = new TimexProperty(timex).Types.Contains(Constants.TimexTypes.Definite);
-
-        return Task.FromResult(isDefinite);
+        // Need to check if input is valid
+        return Task.FromResult(true);
       }
 
       return Task.FromResult(false);
