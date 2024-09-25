@@ -8,7 +8,6 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
-using Microsoft.Recognizers.Text.DataTypes.TimexExpression;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
@@ -18,14 +17,14 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         protected readonly ILogger Logger;
 
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog bookingDialog, ILogger<MainDialog> logger)
+        public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog vacationPeriodDialog, ILogger<MainDialog> logger)
             : base(nameof(MainDialog))
         {
             _cluRecognizer = cluRecognizer;
             Logger = logger;
 
             AddDialog(new TextPrompt(nameof(TextPrompt)));
-            AddDialog(bookingDialog);
+            AddDialog(vacationPeriodDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
@@ -48,8 +47,6 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             }
 
             // Use the text provided in FinalStepAsync or the default if it is the first time.
-            var weekLaterDate = DateTime.Now.AddDays(7).ToString("MMMM d, yyyy");
-            // var messageText = stepContext.Options?.ToString() ?? $"What can I help you with today?\nSay something like \"Book a flight from Paris to Berlin on {weekLaterDate}\"";
             var messageText = stepContext.Options?.ToString() ?? "What can I help you with today?\n\nAsk anything about Human Resource policy of SISU Healthcare Solutions.";
             var promptMessage = MessageFactory.Text(messageText, messageText, InputHints.ExpectingInput);
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
@@ -60,7 +57,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             if (!_cluRecognizer.IsConfigured)
             {
                 // CLU is not configured, we just run the BookingDialog path with an empty BookingDetailsInstance.
-                return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new BookingDetails(), cancellationToken);
+                return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new WorkedYearsDetails(), cancellationToken);
             }
 
             // Call CLU and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
@@ -69,11 +66,11 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             {
                 case HumanResource.Intent.VacationPeriod:
                     // Initialize BookingDetails with any entities we may have found in the response.
-                    var bookingDetails = new BookingDetails()
+                    var bookingDetails = new WorkedYearsDetails()
                     {
-                        Destination = cluResult.Entities.GetToCity(),
-                        Origin = cluResult.Entities.GetWorkedYears(),
-                        TravelDate = cluResult.Entities.GetFlightDate(),
+                        // Destination = cluResult.Entities.GetToCity(),
+                        Years = cluResult.Entities.GetWorkedYears(),
+                        // TravelDate = cluResult.Entities.GetFlightDate(),
                     };
 
                     // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
@@ -93,17 +90,19 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
         private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            // If the child dialog ("BookingDialog") was cancelled, the user failed to confirm or if the intent wasn't BookFlight
             // the Result here will be null.
-            if (stepContext.Result is BookingDetails result)
+            if (stepContext.Result is WorkedYearsDetails result)
             {
                 // Now we have all the booking details call the booking service.
-
-                // If the call to the booking service was successful tell the user.
-
-                var timeProperty = new TimexProperty(result.TravelDate);
-                var travelDateMsg = timeProperty.ToNaturalLanguage(DateTime.Now);
-                var messageText = $"I have you booked to {result.Destination} from {result.Origin} on {travelDateMsg}";
+                string years = result.Years;
+                int vacationWeeks = 2;
+                try {
+                    vacationWeeks = int.Parse(years.Split(" ")[0]) > 3 ? 3 : 2;
+                } catch (Exception e) {
+                    Console.WriteLine(e);
+                }
+                
+                var messageText = $"{vacationWeeks} weeks of vacation for eligible employees";
                 var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);
                 await stepContext.Context.SendActivityAsync(message, cancellationToken);
             }
