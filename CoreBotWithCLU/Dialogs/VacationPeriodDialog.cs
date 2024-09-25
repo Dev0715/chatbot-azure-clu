@@ -12,7 +12,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
   public class VacationPeriodDialog : CancelAndHelpDialog
   {
     private readonly HumanResourceRecognizer _cluRecognizer;
-    //private const string DestinationStepMsgText = "Where would you like to travel to?";
+
     private const string WorkedYearsStepMsgText = "How long have you worked at Sisu?";
 
     public VacationPeriodDialog(HumanResourceRecognizer cluRecognizer)
@@ -22,11 +22,11 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-      AddDialog(new DateResolverDialog());
+      AddDialog(new WorkedYearsDialog());
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
-                WorkedYearsStepAsync,
-                FinalStepAsync,
+        WorkedYearsStepAsync,
+        FinalStepAsync,
       }));
 
       // The initial child Dialog to run.

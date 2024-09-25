@@ -11,13 +11,13 @@ using Microsoft.Recognizers.Text.DataTypes.TimexExpression;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-  public class DateResolverDialog : CancelAndHelpDialog
+  public class WorkedYearsDialog : CancelAndHelpDialog
   {
     private const string PromptMsgText = "When would you like to travel?";
     private const string RepromptMsgText = "I'm sorry, to make your booking please enter a full travel date including Day Month and Year.";
 
-    public DateResolverDialog(string id = null)
-        : base(id ?? nameof(DateResolverDialog))
+    public WorkedYearsDialog(string id = null)
+        : base(id ?? nameof(WorkedYearsDialog))
     {
       AddDialog(new DateTimePrompt(nameof(DateTimePrompt), DateTimePromptValidator));
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
