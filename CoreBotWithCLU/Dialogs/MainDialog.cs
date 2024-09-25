@@ -54,11 +54,11 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
     private async Task<DialogTurnResult> ActStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
-      if (!_cluRecognizer.IsConfigured)
-      {
-        // CLU is not configured, we just run the BookingDialog path with an empty BookingDetailsInstance.
-        return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new WorkedYearsDetails(), cancellationToken);
-      }
+      // if (!_cluRecognizer.IsConfigured)
+      // {
+      //   // CLU is not configured, we just run the BookingDialog path with an empty BookingDetailsInstance.
+      //   return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new WorkedYearsDetails(), cancellationToken);
+      // }
 
       // Call CLU and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
       var cluResult = await _cluRecognizer.RecognizeAsync<HumanResource>(stepContext.Context, cancellationToken);
@@ -66,11 +66,10 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       {
         case HumanResource.Intent.VacationPeriod:
           // Initialize BookingDetails with any entities we may have found in the response.
+          Console.WriteLine("-----> case HumanResource.Intent.VacationPeriod:");
           var bookingDetails = new WorkedYearsDetails()
           {
-            // Destination = cluResult.Entities.GetToCity(),
             Years = cluResult.Entities.GetWorkedYears(),
-            // TravelDate = cluResult.Entities.GetFlightDate(),
           };
 
           // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
@@ -94,18 +93,14 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       if (stepContext.Result is WorkedYearsDetails result)
       {
         // Now we have all the booking details call the booking service.
-        string years = result.Years;
+
         int vacationWeeks = 2;
-        try
+        if (int.TryParse(result.Years, out int number) && number > 3)
         {
-          vacationWeeks = int.Parse(years.Split(" ")[0]) > 3 ? 3 : 2;
-        }
-        catch (Exception e)
-        {
-          Console.WriteLine(e);
+          vacationWeeks = 3;
         }
 
-        var messageText = $"{vacationWeeks} weeks of vacation for eligible employees";
+        var messageText = $"{vacationWeeks} weeks of vacation for eligible employees.";
         var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);
         await stepContext.Context.SendActivityAsync(message, cancellationToken);
       }
