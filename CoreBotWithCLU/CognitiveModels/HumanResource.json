@@ -20,6 +20,9 @@
         "category": "RestVacation"
       },
       {
+        "category": "PaidVacationEligibility"
+      },
+      {
         "category": "None"
       }
     ],
@@ -97,7 +100,7 @@
         "entities": []
       },
       {
-        "text": "What is the company’s policy on vacation days",
+        "text": "What is the company's policy on vacation days",
         "language": "en-us",
         "intent": "VacationPeriod",
         "entities": []
@@ -148,6 +151,56 @@
         "text": "I haven't used all my vacation time, can I carry it over?",
         "language": "en-us",
         "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "Am I eligible for paid vacation?",
+        "language": "en-us",
+        "intent": "PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Is paid vacation available here?",
+        "language": "en-us",
+        "intent": "PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "is it possible to have a paid vacation?",
+        "language": "en-us",
+        "intent": "PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Can I have a paid vacation",
+        "language": "en-us",
+        "intent": "PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Am I available for paid vacation?",
+        "language": "en-us",
+        "intent": "PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "book a restaurant",
+        "intent": "None",
+        "entities": []
+      },
+      {
+        "text": "find an airport near me",
+        "intent": "None",
+        "entities": []
+      },
+      {
+        "text": "i'd like to rent a car",
+        "intent": "None",
+        "entities": []
+      },
+      {
+        "text": "winter is coming",
+        "intent": "None",
         "entities": []
       },
       {
@@ -271,24 +324,16 @@
         ]
       },
       {
-        "text": "book a restaurant",
-        "intent": "None",
-        "entities": []
-      },
-      {
-        "text": "find an airport near me",
-        "intent": "None",
-        "entities": []
-      },
-      {
-        "text": "i'd like to rent a car",
-        "intent": "None",
-        "entities": []
-      },
-      {
-        "text": "winter is coming",
-        "intent": "None",
-        "entities": []
+        "text": "8",
+        "language": "en-us",
+        "intent": "VacationPeriod",
+        "entities": [
+          {
+            "category": "workedYears",
+            "offset": 0,
+            "length": 1
+          }
+        ]
       }
     ]
   }

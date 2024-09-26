@@ -19,6 +19,7 @@ namespace Microsoft.BotBuilderSamples
     {
       VacationPeriod,
       RestVacation,
+      PaidVacationEligibility,
       None
     }
 

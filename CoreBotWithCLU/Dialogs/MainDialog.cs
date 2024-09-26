@@ -26,6 +26,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(vacationPeriodDialog);
       AddDialog(restVacationDialog);
+      AddDialog(new PaidVacationEligibilityDialog());
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
                 IntroStepAsync,
@@ -76,6 +77,15 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             };
             return await stepContext.BeginDialogAsync(nameof(RestVacationDialog), workedYearsDetails, cancellationToken);
           }
+        case HumanResource.Intent.PaidVacationEligibility:
+          {
+            Console.WriteLine("-----> case HumanResource.Intent.PaidVacationEligibility:");
+            var confirmationDetails = new ConfirmationDetails()
+            {
+              Confirmed = false,
+            };
+            return await stepContext.BeginDialogAsync(nameof(PaidVacationEligibilityDialog), confirmationDetails, cancellationToken);
+          }
         default:
           // Catch all for unhandled intents
           // var didntUnderstandMessageText = $"Sorry, I didn't get that. Please try asking in a different way (intent was {cluResult.GetTopIntent().intent})";
@@ -91,26 +101,35 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     private async Task<DialogTurnResult> FinalStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
       // the Result here will be null.
-      if (stepContext.Result is WorkedYearsDetails result)
+      if (stepContext.Result is WorkedYearsDetails workedYearsDetailsResult)
       {
-        // Now we have all the booking details call the booking service.
-
         bool bSenior = false;
         string messageText = "";
-        if (int.TryParse(result.Years, out int number) && number > 3)
+        if (int.TryParse(workedYearsDetailsResult.Years, out int number) && number > 3)
         {
           bSenior = true;
         }
 
-        if (result.Intent == HumanResource.Intent.VacationPeriod)
+        if (workedYearsDetailsResult.Intent == HumanResource.Intent.VacationPeriod)
         {
           messageText = $"{(bSenior ? 3 : 2)} weeks of vacation for eligible employees.";
         }
-        else if (result.Intent == HumanResource.Intent.RestVacation)
+        else if (workedYearsDetailsResult.Intent == HumanResource.Intent.RestVacation)
         {
           messageText = bSenior
             ? "Employees who have completed years 4 - 5+ may carry over a maximum of 40 hours to the next year with a cap of 4 total weeks of vacation in any given year. Any vacation exceeding 4 weeks will be forfeited by the employee."
             : "Employees who have completed years 1-4 may carry over a maximum of 40 hours to the next year with a cap of 3 total weeks of vacation in any given year. Any vacation exceeding 3 weeks will be forfeited by the employee.";
+        }
+
+        var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);
+        await stepContext.Context.SendActivityAsync(message, cancellationToken);
+      }
+      else if (stepContext.Result is ConfirmationDetails confirmationDetailsResult)
+      {
+        string messageText = "I am sorry, it isn't eligible.";
+        if (confirmationDetailsResult.Confirmed)
+        {
+          messageText = "It is the policy of SISU Healthcare Solutions to provide vacation for full-time employees who work a minimum of 40 hours per week. Paid vacation time is for full-time employees during periods of active, full-time, employment.  Paid vacation time does not accumulate during an employee’s personal leave of absence or periods of administrative leave. Employees will earn vacation time from their first day of employment but are not eligible to use the accrued time during the probation period to include any extensions to the probation.";
         }
 
         var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);
