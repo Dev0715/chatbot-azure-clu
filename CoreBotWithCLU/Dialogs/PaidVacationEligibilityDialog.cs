@@ -4,13 +4,14 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using CoreBotCLU.EntityDetails;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-  public class PaidVacationEligibilityDialog : CancelAndHelpDialog
+    public class PaidVacationEligibilityDialog : CancelAndHelpDialog
   {
     private const string confirmStepMsgText = "Are you a full time employee with at least one year of employment at Sisu?";
 
