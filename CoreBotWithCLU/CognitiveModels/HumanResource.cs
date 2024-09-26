@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Bot.Builder;
@@ -76,7 +77,8 @@ namespace Microsoft.BotBuilderSamples
       var max = 0.0;
       foreach (var entry in Intents)
       {
-        if (entry.Value.Score > max)
+        Console.WriteLine($"{entry.Key}: {entry.Value.Score}");
+        if (entry.Value.Score > 0.7 && entry.Value.Score > max)
         {
           maxIntent = entry.Key;
           max = entry.Value.Score.Value;

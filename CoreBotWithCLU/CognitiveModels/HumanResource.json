@@ -206,7 +206,7 @@
       {
         "text": "I have worked 1 year",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -218,7 +218,7 @@
       {
         "text": "1 year",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -230,7 +230,7 @@
       {
         "text": "I have worked for 5 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -242,7 +242,7 @@
       {
         "text": "I have worked for 10 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -254,7 +254,7 @@
       {
         "text": "12 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -266,7 +266,7 @@
       {
         "text": "More than 5 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -278,7 +278,7 @@
       {
         "text": "Around 5 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -290,7 +290,7 @@
       {
         "text": "I worked here for 4 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -302,7 +302,7 @@
       {
         "text": "I worked here more than 17 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -314,7 +314,7 @@
       {
         "text": "About 7 years",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
@@ -326,7 +326,7 @@
       {
         "text": "8",
         "language": "en-us",
-        "intent": "_12_VacationPeriod",
+        "intent": "None",
         "entities": [
           {
             "category": "workedYears",
