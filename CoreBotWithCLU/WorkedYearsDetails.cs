@@ -6,5 +6,7 @@ namespace Microsoft.BotBuilderSamples
   public class WorkedYearsDetails
   {
     public string Years { get; set; }
+
+    public HumanResource.Intent Intent { get; set; }
   }
 }

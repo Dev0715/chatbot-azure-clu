@@ -17,6 +17,9 @@
         "category": "VacationPeriod"
       },
       {
+        "category": "RestVacation"
+      },
+      {
         "category": "None"
       }
     ],
@@ -103,6 +106,48 @@
         "text": "policy on vacation days",
         "language": "en-us",
         "intent": "VacationPeriod",
+        "entities": []
+      },
+      {
+        "text": "What happens if I don't use all my vacation time?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "if I don't use all my vacation time?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "Can I carry over vacation time I haven't use?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "Can I bring vacation hours I haven't use?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "If I haven't used all my vacation time, can I have more vacation time next year?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "I haven't used all my vacation time, can I bring it to next year?",
+        "language": "en-us",
+        "intent": "RestVacation",
+        "entities": []
+      },
+      {
+        "text": "I haven't used all my vacation time, can I carry it over?",
+        "language": "en-us",
+        "intent": "RestVacation",
         "entities": []
       },
       {

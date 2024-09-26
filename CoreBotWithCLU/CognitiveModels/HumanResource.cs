@@ -9,63 +9,64 @@ using Newtonsoft.Json;
 
 namespace Microsoft.BotBuilderSamples
 {
-    /// <summary>
-    /// An <see cref="IRecognizerConvert"/> implementation that provides helper methods and properties to interact with
-    /// the CLU recognizer results.
-    /// </summary>
-    public class HumanResource : IRecognizerConvert
+  /// <summary>
+  /// An <see cref="IRecognizerConvert"/> implementation that provides helper methods and properties to interact with
+  /// the CLU recognizer results.
+  /// </summary>
+  public class HumanResource : IRecognizerConvert
+  {
+    public enum Intent
     {
-        public enum Intent
-        {
-            VacationPeriod,
-            None
-        }
-
-        public string Text { get; set; }
-
-        public string AlteredText { get; set; }
-
-        public Dictionary<Intent, IntentScore> Intents { get; set; }
-
-        public CluEntities Entities { get; set; }
-
-        public IDictionary<string, object> Properties { get; set; }
-
-        public void Convert(dynamic result)
-        {
-            var jsonResult = JsonConvert.SerializeObject(result, new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
-            var app = JsonConvert.DeserializeObject<HumanResource>(jsonResult);
-
-            Text = app.Text;
-            AlteredText = app.AlteredText;
-            Intents = app.Intents;
-            Entities = app.Entities;
-            Properties = app.Properties;
-        }
-
-        public (Intent intent, double score) GetTopIntent()
-        {
-            var maxIntent = Intent.None;
-            var max = 0.0;
-            foreach (var entry in Intents)
-            {
-                if (entry.Value.Score > max)
-                {
-                    maxIntent = entry.Key;
-                    max = entry.Value.Score.Value;
-                }
-            }
-
-            return (maxIntent, max);
-        }
-
-        public class CluEntities
-        {
-            public CluEntity[] Entities;
-
-            public CluEntity[] GetWorkedYearsList() => Entities.Where(e => e.Category == "workedYears").ToArray();
-
-            public string GetWorkedYears() => GetWorkedYearsList().FirstOrDefault()?.Text;
-        }
+      VacationPeriod,
+      RestVacation,
+      None
     }
+
+    public string Text { get; set; }
+
+    public string AlteredText { get; set; }
+
+    public Dictionary<Intent, IntentScore> Intents { get; set; }
+
+    public CluEntities Entities { get; set; }
+
+    public IDictionary<string, object> Properties { get; set; }
+
+    public void Convert(dynamic result)
+    {
+      var jsonResult = JsonConvert.SerializeObject(result, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+      var app = JsonConvert.DeserializeObject<HumanResource>(jsonResult);
+
+      Text = app.Text;
+      AlteredText = app.AlteredText;
+      Intents = app.Intents;
+      Entities = app.Entities;
+      Properties = app.Properties;
+    }
+
+    public (Intent intent, double score) GetTopIntent()
+    {
+      var maxIntent = Intent.None;
+      var max = 0.0;
+      foreach (var entry in Intents)
+      {
+        if (entry.Value.Score > max)
+        {
+          maxIntent = entry.Key;
+          max = entry.Value.Score.Value;
+        }
+      }
+
+      return (maxIntent, max);
+    }
+
+    public class CluEntities
+    {
+      public CluEntity[] Entities;
+
+      public CluEntity[] GetWorkedYearsList() => Entities.Where(e => e.Category == "workedYears").ToArray();
+
+      public string GetWorkedYears() => GetWorkedYearsList().FirstOrDefault()?.Text;
+    }
+  }
 }

@@ -10,15 +10,15 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-  public class VacationPeriodDialog : CancelAndHelpDialog
+  public class RestVacationDialog : CancelAndHelpDialog
   {
     private readonly HumanResourceRecognizer _cluRecognizer;
 
     private const string WorkedYearsStepMsgText = "How long have you worked at Sisu?";
     private const string RePromptMsgText = "I am sorry, could you please enter the number of years you have worked here?";
 
-    public VacationPeriodDialog(HumanResourceRecognizer cluRecognizer)
-        : base(nameof(VacationPeriodDialog))
+    public RestVacationDialog(HumanResourceRecognizer cluRecognizer)
+        : base(nameof(RestVacationDialog))
     {
       _cluRecognizer = cluRecognizer;
 
@@ -65,7 +65,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       else
       {
         workedYearsDetails.Years = Years;
-        workedYearsDetails.Intent = HumanResource.Intent.VacationPeriod;
+        workedYearsDetails.Intent = HumanResource.Intent.RestVacation;
         return await stepContext.EndDialogAsync(workedYearsDetails, cancellationToken);
       }
 

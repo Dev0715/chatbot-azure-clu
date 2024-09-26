@@ -38,8 +38,11 @@ namespace Microsoft.BotBuilderSamples
       // Register LUIS recognizer
       services.AddSingleton<HumanResourceRecognizer>();
 
-      // Register the BookingDialog.
+      // Register the VacationPeriodDialog.
       services.AddSingleton<VacationPeriodDialog>();
+
+      // Register the RestVacationDialog.
+      services.AddSingleton<RestVacationDialog>();
 
       // The MainDialog that will be run by the bot.
       services.AddSingleton<MainDialog>();

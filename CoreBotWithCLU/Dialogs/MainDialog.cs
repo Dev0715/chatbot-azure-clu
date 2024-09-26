@@ -17,7 +17,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     protected readonly ILogger Logger;
 
     // Dependency injection uses this constructor to instantiate MainDialog
-    public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog vacationPeriodDialog, ILogger<MainDialog> logger)
+    public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog vacationPeriodDialog, RestVacationDialog restVacationDialog, ILogger<MainDialog> logger)
         : base(nameof(MainDialog))
     {
       _cluRecognizer = cluRecognizer;
@@ -25,6 +25,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(vacationPeriodDialog);
+      AddDialog(restVacationDialog);
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
                 IntroStepAsync,
@@ -54,27 +55,27 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
     private async Task<DialogTurnResult> ActStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
-      // if (!_cluRecognizer.IsConfigured)
-      // {
-      //   // CLU is not configured, we just run the BookingDialog path with an empty BookingDetailsInstance.
-      //   return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), new WorkedYearsDetails(), cancellationToken);
-      // }
-
-      // Call CLU and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
       var cluResult = await _cluRecognizer.RecognizeAsync<HumanResource>(stepContext.Context, cancellationToken);
       switch (cluResult.GetTopIntent().intent)
       {
         case HumanResource.Intent.VacationPeriod:
-          // Initialize BookingDetails with any entities we may have found in the response.
-          Console.WriteLine("-----> case HumanResource.Intent.VacationPeriod:");
-          var bookingDetails = new WorkedYearsDetails()
           {
-            Years = cluResult.Entities.GetWorkedYears(),
-          };
-
-          // Run the BookingDialog giving it whatever details we have from the CLU call, it will fill out the remainder.
-          return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), bookingDetails, cancellationToken);
-
+            Console.WriteLine("-----> case HumanResource.Intent.VacationPeriod:");
+            var workedYearsDetails = new WorkedYearsDetails()
+            {
+              Years = cluResult.Entities.GetWorkedYears(),
+            };
+            return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), workedYearsDetails, cancellationToken);
+          }
+        case HumanResource.Intent.RestVacation:
+          {
+            Console.WriteLine("-----> case HumanResource.Intent.RestVacation:");
+            var workedYearsDetails = new WorkedYearsDetails()
+            {
+              Years = cluResult.Entities.GetWorkedYears(),
+            };
+            return await stepContext.BeginDialogAsync(nameof(RestVacationDialog), workedYearsDetails, cancellationToken);
+          }
         default:
           // Catch all for unhandled intents
           // var didntUnderstandMessageText = $"Sorry, I didn't get that. Please try asking in a different way (intent was {cluResult.GetTopIntent().intent})";
@@ -94,13 +95,24 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       {
         // Now we have all the booking details call the booking service.
 
-        int vacationWeeks = 2;
+        bool bSenior = false;
+        string messageText = "";
         if (int.TryParse(result.Years, out int number) && number > 3)
         {
-          vacationWeeks = 3;
+          bSenior = true;
         }
 
-        var messageText = $"{vacationWeeks} weeks of vacation for eligible employees.";
+        if (result.Intent == HumanResource.Intent.VacationPeriod)
+        {
+          messageText = $"{(bSenior ? 3 : 2)} weeks of vacation for eligible employees.";
+        }
+        else if (result.Intent == HumanResource.Intent.RestVacation)
+        {
+          messageText = bSenior
+            ? "Employees who have completed years 4 - 5+ may carry over a maximum of 40 hours to the next year with a cap of 4 total weeks of vacation in any given year. Any vacation exceeding 4 weeks will be forfeited by the employee."
+            : "Employees who have completed years 1-4 may carry over a maximum of 40 hours to the next year with a cap of 3 total weeks of vacation in any given year. Any vacation exceeding 3 weeks will be forfeited by the employee.";
+        }
+
         var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);
         await stepContext.Context.SendActivityAsync(message, cancellationToken);
       }
