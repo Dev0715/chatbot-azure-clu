@@ -11,7 +11,7 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-    public class PaidVacationEligibilityDialog : CancelAndHelpDialog
+  public class PaidVacationEligibilityDialog : CancelAndHelpDialog
   {
     private const string confirmStepMsgText = "Are you a full time employee with at least one year of employment at Sisu?";
 
@@ -44,7 +44,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     {
       var confirmationDetails = (ConfirmationDetails)stepContext.Options;
       confirmationDetails.Confirmed = (bool)stepContext.Result;
-      confirmationDetails.Intent = HumanResource.Intent.PaidVacationEligibility;
+      confirmationDetails.Intent = HumanResource.Intent._18_PaidVacationEligibility;
       return await stepContext.EndDialogAsync(confirmationDetails, cancellationToken);
     }
   }

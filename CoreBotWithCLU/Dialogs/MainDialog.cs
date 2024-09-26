@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-    public class MainDialog : ComponentDialog
+  public class MainDialog : ComponentDialog
   {
     private readonly HumanResourceRecognizer _cluRecognizer;
     protected readonly ILogger Logger;
@@ -60,27 +60,27 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       var cluResult = await _cluRecognizer.RecognizeAsync<HumanResource>(stepContext.Context, cancellationToken);
       switch (cluResult.GetTopIntent().intent)
       {
-        case HumanResource.Intent.VacationPeriod:
+        case HumanResource.Intent._12_VacationPeriod:
           {
-            Console.WriteLine("-----> case HumanResource.Intent.VacationPeriod:");
+            Console.WriteLine("-----> case HumanResource.Intent._12_VacationPeriod:");
             var workedYearsDetails = new WorkedYearsDetails()
             {
               Years = cluResult.Entities.GetWorkedYears(),
             };
             return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), workedYearsDetails, cancellationToken);
           }
-        case HumanResource.Intent.RestVacation:
+        case HumanResource.Intent._13_RestVacation:
           {
-            Console.WriteLine("-----> case HumanResource.Intent.RestVacation:");
+            Console.WriteLine("-----> case HumanResource.Intent._13_RestVacation:");
             var workedYearsDetails = new WorkedYearsDetails()
             {
               Years = cluResult.Entities.GetWorkedYears(),
             };
             return await stepContext.BeginDialogAsync(nameof(RestVacationDialog), workedYearsDetails, cancellationToken);
           }
-        case HumanResource.Intent.PaidVacationEligibility:
+        case HumanResource.Intent._18_PaidVacationEligibility:
           {
-            Console.WriteLine("-----> case HumanResource.Intent.PaidVacationEligibility:");
+            Console.WriteLine("-----> case HumanResource.Intent._18_PaidVacationEligibility:");
             var confirmationDetails = new ConfirmationDetails()
             {
               Confirmed = false,
@@ -111,15 +111,15 @@ namespace Microsoft.BotBuilderSamples.Dialogs
           bSenior = true;
         }
 
-        if (workedYearsDetailsResult.Intent == HumanResource.Intent.VacationPeriod)
+        if (workedYearsDetailsResult.Intent == HumanResource.Intent._12_VacationPeriod)
         {
           messageText = $"{(bSenior ? 3 : 2)} weeks of vacation for eligible employees.";
         }
-        else if (workedYearsDetailsResult.Intent == HumanResource.Intent.RestVacation)
+        else if (workedYearsDetailsResult.Intent == HumanResource.Intent._13_RestVacation)
         {
           messageText = bSenior
             ? "Employees who have completed years 4 - 5+ may carry over a maximum of 40 hours to the next year with a cap of 4 total weeks of vacation in any given year. Any vacation exceeding 4 weeks will be forfeited by the employee."
-            : "Employees who have completed years 1-4 may carry over a maximum of 40 hours to the next year with a cap of 3 total weeks of vacation in any given year. Any vacation exceeding 3 weeks will be forfeited by the employee.";
+            : "Employees who have completed years 1 - 4 may carry over a maximum of 40 hours to the next year with a cap of 3 total weeks of vacation in any given year. Any vacation exceeding 3 weeks will be forfeited by the employee.";
         }
 
         var message = MessageFactory.Text(messageText, messageText, InputHints.IgnoringInput);

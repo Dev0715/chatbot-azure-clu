@@ -11,7 +11,7 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-    public class RestVacationDialog : CancelAndHelpDialog
+  public class RestVacationDialog : CancelAndHelpDialog
   {
     private readonly HumanResourceRecognizer _cluRecognizer;
 
@@ -66,7 +66,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       else
       {
         workedYearsDetails.Years = Years;
-        workedYearsDetails.Intent = HumanResource.Intent.RestVacation;
+        workedYearsDetails.Intent = HumanResource.Intent._13_RestVacation;
         return await stepContext.EndDialogAsync(workedYearsDetails, cancellationToken);
       }
 

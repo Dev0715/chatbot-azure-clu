@@ -17,9 +17,34 @@ namespace Microsoft.BotBuilderSamples
   {
     public enum Intent
     {
-      VacationPeriod,
-      RestVacation,
-      PaidVacationEligibility,
+      _1_WhenStartGettingPaidSickTime,
+      _2_WhenEligibleForSickTime,
+      _3_PaidSickTimeForPerDiemEmployee,
+      _4_PaidSickTimeForPartTimeEmployee,
+      _5_SickTimePeriod,
+      _6_SickTimeRollOver,
+      _7_RestSickTime,
+      _8_UseSickTimeWhenImmediateFamilySick,
+      _9_FutureSickTimeUsability,
+      _10_VacationTimeAsPartTimeEmployee,
+      _11_VacationTimeAsPerDiemEmployee,
+      _12_VacationPeriod, // Layer - Worked Years
+      _13_RestVacation, // Layer - Worked Years
+      _14_WhenToRequestVacationTime,
+      _15_VacationTimeGuaranteed,
+      _16_CanTakeOneHourVacation,
+      _17_CanUseVacationTimeForAbsence,
+      _18_PaidVacationEligibility,  // Layer - Confirmation
+      _19_VacationTimeAfterQuit,
+      _20_VacationTimeAfterFired,
+      _21_HolidayOnVacation,
+      _22_AccruedVacationTimeAfterAbsence,
+      _23_ManagerResponsibilityUponVacationRequest,
+      _24_CanManagerDenyVacationRequest,
+      _25_HowToScheduleVacationTime,
+      _26_CanVacationTimeCoverTardiness,
+      _27_VacationPolicy,
+      _28_VacationInSmallIncrements,
       None
     }
 
