@@ -18,7 +18,6 @@ namespace Microsoft.BotBuilderSamples
   {
     public enum Intent
     {
-      _1_WhenStartGettingPaidSickTime,
       _2_WhenEligibleForSickTime,
       _3_PaidSickTimeForPerDiemEmployee,
       _4_PaidSickTimeForPartTimeEmployee,

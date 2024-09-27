@@ -10,7 +10,6 @@ namespace CoreBotCLU
   {
     public static readonly Dictionary<HumanResource.Intent, string> AnswersForIntent = new Dictionary<HumanResource.Intent, string>
         {
-            { HumanResource.Intent._1_WhenStartGettingPaidSickTime, "Accumulation of sick leave will start at the first day of employment; however, sick leave pay will not be granted until the completion of the 90-day probationary period." },
             { HumanResource.Intent._2_WhenEligibleForSickTime,  "Accumulation of sick leave will start at the first day of employment; however, sick leave pay will not be granted until the completion of the 90-day probationary period." },
             { HumanResource.Intent._3_PaidSickTimeForPerDiemEmployee,  "It is the policy of SISU Healthcare Solutions to provide paid sick leave for employees who work a minimum of 40 hours per week." },
             { HumanResource.Intent._4_PaidSickTimeForPartTimeEmployee, "It is the policy of SISU Healthcare Solutions to provide paid sick leave for employees who work a minimum of 40 hours per week." },

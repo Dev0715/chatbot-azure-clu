@@ -14,9 +14,6 @@
   "assets": {
     "intents": [
       {
-        "category": "_1_WhenStartGettingPaidSickTime"
-      },
-      {
         "category": "_2_WhenEligibleForSickTime"
       },
       {
@@ -111,7 +108,67 @@
       {
         "text": "When do I start getting paid sick time?",
         "language": "en-us",
-        "intent": "_1_WhenStartGettingPaidSickTime",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When am I eligible to receive paid sick leave?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "At what point do I qualify for paid sick time?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When can I begin using my paid sick leave?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "How soon can I start taking paid sick days?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When does my paid sick leave become available?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When will I be able to use my paid sick time?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When do I start accruing paid sick leave?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When can I start benefiting from paid sick leave?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When does my paid sick leave entitlement begin?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
+        "entities": []
+      },
+      {
+        "text": "When am I allowed to take paid sick leave?",
+        "language": "en-us",
+        "intent": "_2_WhenEligibleForSickTime",
         "entities": []
       },
       {
@@ -127,7 +184,127 @@
         "entities": []
       },
       {
+        "text": "Am I eligible for paid sick leave as a per diem worker?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do per diem employees receive paid sick time?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is paid sick leave available to per diem staff?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can I get paid sick days if I work on a per diem basis?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are per diem employees entitled to paid sick leave?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do I qualify for paid sick leave as a per diem employee?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is paid sick time provided to per diem workers?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do per diem employees get paid sick leave benefits?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are per diem staff members eligible for paid sick days?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can per diem employees access paid sick leave?",
+        "language": "en-us",
+        "intent": "_3_PaidSickTimeForPerDiemEmployee",
+        "entities": []
+      },
+      {
         "text": "Do I get paid sick time if I am a part time employee?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Am I eligible for paid sick leave as a part-time worker?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do part-time employees receive paid sick days?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is paid sick time available to part-time staff?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can part-time workers get paid sick leave?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are part-time employees entitled to paid sick leave?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do part-time employees qualify for paid sick time?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is paid sick leave provided to part-time employees?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do part-time workers have access to paid sick leave?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are part-time employees eligible for paid sick days?",
+        "language": "en-us",
+        "intent": "_4_PaidSickTimeForPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can I get paid sick leave if I work part-time?",
         "language": "en-us",
         "intent": "_4_PaidSickTimeForPartTimeEmployee",
         "entities": []
@@ -139,7 +316,127 @@
         "entities": []
       },
       {
+        "text": "How many sick days am I entitled to annually?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "What is the yearly allowance for sick leave?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "How much sick leave do I accumulate each year?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "What is the total number of sick days I get per year?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "How many days of sick leave can I take in a year?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "What is the annual sick leave policy?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "How much paid sick time do I receive each year?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "What is the yearly quota for sick leave?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "How many sick days do I earn per year?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
+        "text": "What is the maximum amount of sick leave I can use annually?",
+        "language": "en-us",
+        "intent": "_5_SickTimePeriod",
+        "entities": []
+      },
+      {
         "text": "Does my sick time roll over?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Will my unused sick leave carry over to the next year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Can I transfer my remaining sick days to the following year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Does my sick leave balance continue into the new year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Are my unused sick days carried over annually?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Will my sick leave accumulate if not used by year-end?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Can I roll over my sick leave to the next calendar year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Is my unused sick time transferred to the next year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Does my sick leave balance reset at the end of the year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Will my sick days be carried forward to the next year?",
+        "language": "en-us",
+        "intent": "_6_SickTimeRollOver",
+        "entities": []
+      },
+      {
+        "text": "Can I keep my unused sick leave for the next year?",
         "language": "en-us",
         "intent": "_6_SickTimeRollOver",
         "entities": []
@@ -151,7 +448,127 @@
         "entities": []
       },
       {
+        "text": "What happens if I don't use all my sick leave?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What should I do if I have unused sick days?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What are the consequences of not using all my sick time?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What if I end the year with leftover sick leave?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What occurs if I don’t take all my sick days?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What if I don’t utilize all my allocated sick leave?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What happens to my unused sick days?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What if I don’t use up all my sick leave?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What should I expect if I don’t take all my sick time?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
+        "text": "What if I have remaining sick days at the end of the year?",
+        "language": "en-us",
+        "intent": "_7_RestSickTime",
+        "entities": []
+      },
+      {
         "text": "My child is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "My wife is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "My husband is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "My father is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "My mother is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "My parents are sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "Can I use my sick time because my wife is sick?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "Since my husband is sick, can I use my sick time?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "Is it possible to use my sick time if my father is sick?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "May I use my sick time due to my mother being sick?",
+        "language": "en-us",
+        "intent": "_8_UseSickTimeWhenImmediateFamilySick",
+        "entities": []
+      },
+      {
+        "text": "With my parents being sick, can I use my sick time?",
         "language": "en-us",
         "intent": "_8_UseSickTimeWhenImmediateFamilySick",
         "entities": []
@@ -163,7 +580,127 @@
         "entities": []
       },
       {
+        "text": "I’ve used up all my sick leave; can I borrow from my future sick days?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "My current sick leave is exhausted; is it possible to use my future sick leave?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "I’ve run out of sick days; can I advance some from the future?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "Can I use my future sick leave since I’ve used up my current allotment?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "I’ve depleted my sick leave; can I take some from my future balance?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "Is it okay to use my future sick days now that I’ve used up my current ones?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "I’ve exhausted my sick leave; can I utilize my future sick leave?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "Can I apply my future sick leave since my current sick days are all used up?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "My sick leave is all used up; can I use some from my future sick leave?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
+        "text": "I’ve run out of sick leave; can I take some from my future sick leave balance?",
+        "language": "en-us",
+        "intent": "_9_FutureSickTimeUsability",
+        "entities": []
+      },
+      {
         "text": "Do I get vacation time as a part time employee?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Am I eligible for vacation time as a part-time worker?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do part-time employees receive vacation benefits?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is vacation time provided to part-time staff?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can part-time employees take paid vacation days?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are part-time workers entitled to vacation leave?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Does my part-time position include vacation time?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Will I get any vacation days as a part-time employee?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are there vacation benefits for part-time employees?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do part-time roles come with vacation time?",
+        "language": "en-us",
+        "intent": "_10_VacationTimeAsPartTimeEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is vacation leave available for part-time employees?",
         "language": "en-us",
         "intent": "_10_VacationTimeAsPartTimeEmployee",
         "entities": []
@@ -175,79 +712,127 @@
         "entities": []
       },
       {
+        "text": "Am I eligible for vacation time as a per diem worker?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do per diem employees receive vacation benefits?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is vacation time available to per diem staff?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Can per diem employees take paid vacation days?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are per diem workers entitled to vacation leave?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do per diem positions include vacation time?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is vacation time offered to per diem employees?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Do per diem employees qualify for vacation leave?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Are per diem staff members granted vacation time?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
+        "text": "Is vacation leave provided to per diem workers?",
+        "language": "en-us",
+        "intent": "_11_VacationTimeAsPerDiemEmployee",
+        "entities": []
+      },
+      {
         "text": "How much vacation time do I get?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "vacation time",
+        "text": "What is the amount of vacation time I am entitled to?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "vacation days",
+        "text": "How many vacation days do I receive?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "How much vacation time can I have?",
+        "text": "Can you tell me how much paid time off I get?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "How long vacation time do I get",
+        "text": "What is my annual vacation allowance?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "What is the vacation policy",
+        "text": "How many days off do I get each year?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "How many days of vacation can employees take each year?",
+        "text": "What is the total vacation time I can take?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "What are the rules for taking vacation days?",
+        "text": "How much leave am I eligible for?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "rules for taking vacation days?",
+        "text": "What is the vacation policy regarding days off?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "rules for vacation days?",
+        "text": "How many vacation days am I allotted?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
       },
       {
-        "text": "How much leave can I take each year?",
-        "language": "en-us",
-        "intent": "_12_VacationPeriod",
-        "entities": []
-      },
-      {
-        "text": "What is the company's policy on vacation days",
-        "language": "en-us",
-        "intent": "_12_VacationPeriod",
-        "entities": []
-      },
-      {
-        "text": "policy on vacation days",
+        "text": "What is the duration of my vacation time?",
         "language": "en-us",
         "intent": "_12_VacationPeriod",
         "entities": []
@@ -259,37 +844,61 @@
         "entities": []
       },
       {
-        "text": "if I don't use all my vacation time?",
+        "text": "What are the consequences of not using all my vacation days?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
       },
       {
-        "text": "Can I carry over vacation time I haven't use?",
+        "text": "What will happen if I leave some of my vacation time unused?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
       },
       {
-        "text": "Can I bring vacation hours I haven't use?",
+        "text": "What occurs if I don’t take all my vacation leave?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
       },
       {
-        "text": "If I haven't used all my vacation time, can I have more vacation time next year?",
+        "text": "What happens if I don’t utilize all my vacation days?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
       },
       {
-        "text": "I haven't used all my vacation time, can I bring it to next year?",
+        "text": "What will be the result if I don’t use up all my vacation time?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
       },
       {
-        "text": "I haven't used all my vacation time, can I carry it over?",
+        "text": "What happens if I don’t take advantage of all my vacation days?",
+        "language": "en-us",
+        "intent": "_13_RestVacation",
+        "entities": []
+      },
+      {
+        "text": "What are the implications of not using all my vacation time?",
+        "language": "en-us",
+        "intent": "_13_RestVacation",
+        "entities": []
+      },
+      {
+        "text": "What happens if I don’t spend all my vacation days?",
+        "language": "en-us",
+        "intent": "_13_RestVacation",
+        "entities": []
+      },
+      {
+        "text": "What will happen if I don’t make use of all my vacation leave?",
+        "language": "en-us",
+        "intent": "_13_RestVacation",
+        "entities": []
+      },
+      {
+        "text": "What occurs if I don’t take all my allotted vacation time?",
         "language": "en-us",
         "intent": "_13_RestVacation",
         "entities": []
@@ -301,7 +910,127 @@
         "entities": []
       },
       {
+        "text": "When should I submit my vacation request?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How early do I need to ask for time off?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What is the required notice period for vacation requests?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How much advance notice is needed to request vacation time?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "By when should I inform my manager about my vacation plans?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How far ahead should I plan my vacation request?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What is the lead time for requesting vacation days?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "When is the best time to request my vacation leave?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How soon should I notify my employer about my vacation?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What is the deadline for submitting a vacation request?",
+        "language": "en-us",
+        "intent": "_14_WhenToRequestVacationTime",
+        "entities": []
+      },
+      {
         "text": "Is my vacation time guaranteed?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Am I assured of my vacation time?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Will my vacation time be secured?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Is my vacation leave guaranteed?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Can I count on having my vacation time?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Is my vacation time confirmed?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Will my vacation time be honored?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Is my vacation time assured?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Do I have a guarantee for my vacation time?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Is my vacation time protected?",
+        "language": "en-us",
+        "intent": "_15_VacationTimeGuaranteed",
+        "entities": []
+      },
+      {
+        "text": "Will my vacation time be granted without issue?",
         "language": "en-us",
         "intent": "_15_VacationTimeGuaranteed",
         "entities": []
@@ -313,7 +1042,127 @@
         "entities": []
       },
       {
+        "text": "Can I take a few hours of vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Can I take 2 hours of vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Can I take 3 hours of vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Is it possible for me to take a few hours off?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Is it okay if I take 2 hours off?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "May I take 3 hours off for vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Could I have a few hours of vacation time?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Could I take 2 hours of vacation time?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Would it be alright if I took 3 hours of vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
+        "text": "Can I take a couple of hours off for vacation?",
+        "language": "en-us",
+        "intent": "_16_CanTakeOneHourVacation",
+        "entities": []
+      },
+      {
         "text": "I didn't show up for work today, can I use my vacation time?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Since I didn’t show up for work today, may I use my vacation time?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "I missed work today; is it possible for me to take my vacation hours?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Can I apply my vacation leave after not attending work today?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Because I was absent today, am I allowed to use my vacation days?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "I didn’t attend work today; would it be alright if I took my vacation time?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Not being at work today, can I request to use my vacation hours?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Today, I failed to show up for work; can I take some vacation time?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Since I wasn’t at work, may I utilize my vacation leave?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "I was not present at work today; is it acceptable to use my vacation time?",
+        "language": "en-us",
+        "intent": "_17_CanUseVacationTimeForAbsence",
+        "entities": []
+      },
+      {
+        "text": "Can I take my vacation days considering I didn’t report to work today?",
         "language": "en-us",
         "intent": "_17_CanUseVacationTimeForAbsence",
         "entities": []
@@ -325,25 +1174,61 @@
         "entities": []
       },
       {
-        "text": "Is paid vacation available here?",
+        "text": "Do I qualify for paid vacation?",
         "language": "en-us",
         "intent": "_18_PaidVacationEligibility",
         "entities": []
       },
       {
-        "text": "is it possible to have a paid vacation?",
+        "text": "Am I entitled to receive paid vacation time?",
         "language": "en-us",
         "intent": "_18_PaidVacationEligibility",
         "entities": []
       },
       {
-        "text": "Can I have a paid vacation",
+        "text": "Is paid vacation available to me?",
         "language": "en-us",
         "intent": "_18_PaidVacationEligibility",
         "entities": []
       },
       {
-        "text": "Am I available for paid vacation?",
+        "text": "Can I receive paid vacation days?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Am I allowed to take paid vacation?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Is it possible for me to have paid vacation?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Do I have the right to paid vacation time?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Am I permitted to take paid vacation?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Can I be granted paid vacation?",
+        "language": "en-us",
+        "intent": "_18_PaidVacationEligibility",
+        "entities": []
+      },
+      {
+        "text": "Am I eligible to receive vacation pay?",
         "language": "en-us",
         "intent": "_18_PaidVacationEligibility",
         "entities": []
@@ -355,7 +1240,127 @@
         "entities": []
       },
       {
+        "text": "If I resign, will I receive my paid vacation time?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "Should I decide to leave, will I be compensated for my paid vacation?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "If I choose to quit, am I entitled to my paid vacation time?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "Will I get my vacation pay if I decide to leave the company?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "If I terminate my employment, will I be paid for my vacation time?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "Should I quit, can I expect to receive my paid vacation hours?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "If I decide to resign, will my paid vacation time be paid out?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "If I leave the job, do I still get my paid vacation time?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "If I opt to quit, am I eligible for my vacation pay?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
+        "text": "Will I receive my vacation compensation if I choose to quit?",
+        "language": "en-us",
+        "intent": "_19_VacationTimeAfterQuit",
+        "entities": []
+      },
+      {
         "text": "If I get fired, will I get my paid vacation time?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If I am terminated, will I receive my paid vacation time?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "Should I be let go, will I be compensated for my paid vacation?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If I lose my job, am I entitled to my paid vacation time?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "Will I get my vacation pay if I am dismissed from my position?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If I am fired, will I still receive my paid vacation hours?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "Should I be fired, can I expect to get my paid vacation time?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If my employment is terminated, will I be paid for my vacation time?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If I am let go, do I still get my vacation pay?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "If I am dismissed, am I eligible for my vacation compensation?",
+        "language": "en-us",
+        "intent": "_20_VacationTimeAfterFired",
+        "entities": []
+      },
+      {
+        "text": "Will I receive my vacation pay if I get fired?",
         "language": "en-us",
         "intent": "_20_VacationTimeAfterFired",
         "entities": []
@@ -367,7 +1372,127 @@
         "entities": []
       },
       {
+        "text": "If a holiday falls during my vacation, will I need to use a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "Should there be a holiday while I’m on vacation, do I have to take a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If I have a holiday during my vacation, will it count as a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If my vacation includes a holiday, do I use one of my vacation days?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "When there’s a holiday on my vacation, do I need to take a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If a holiday occurs while I'm on vacation, should I use a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If my vacation overlaps with a holiday, will I have to use a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If there’s a holiday during my time off, do I utilize a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "Should a holiday happen while I’m on vacation, will I use a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
+        "text": "If a holiday is part of my vacation, do I need to count it as a vacation day?",
+        "language": "en-us",
+        "intent": "_21_HolidayOnVacation",
+        "entities": []
+      },
+      {
         "text": "If I take a leave of absence, will I still get my accrued vacation time?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "Will I still have my accrued vacation time if I take a leave of absence?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "If I choose to take a leave of absence, do I retain my accrued vacation days?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "Should I decide to go on a leave, will my accrued vacation time be preserved?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "If I take time off, will my accrued vacation hours remain intact?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "Am I entitled to my accrued vacation time if I take a leave of absence?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "If I go on a leave of absence, do I keep the vacation days I’ve accrued?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "Will my accrued vacation time still be available to me during a leave of absence?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "If I opt for a leave, am I still eligible for my accrued vacation days?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "Should I take a break from work, do I retain my accrued vacation time?",
+        "language": "en-us",
+        "intent": "_22_AccruedVacationTimeAfterAbsence",
+        "entities": []
+      },
+      {
+        "text": "If I take a leave, will my accrued vacation hours still be counted?",
         "language": "en-us",
         "intent": "_22_AccruedVacationTimeAfterAbsence",
         "entities": []
@@ -379,7 +1504,127 @@
         "entities": []
       },
       {
+        "text": "What duties do managers have regarding vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "How should managers handle vacation requests from employees?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What are the obligations of managers in relation to vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What is expected of managers concerning employee vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What responsibilities do managers hold for managing vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "How are managers expected to deal with vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What are managers' roles when it comes to approving vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What should managers consider when handling vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "What responsibilities do managers have to fulfill regarding vacation requests?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "How should managers approach the issue of vacation requests from their team?",
+        "language": "en-us",
+        "intent": "_23_ManagerResponsibilityUponVacationRequest",
+        "entities": []
+      },
+      {
         "text": "Can my manager deny my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Is it possible for my manager to refuse my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Can my vacation request be rejected by my manager?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Is my manager allowed to deny my request for vacation?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "May my manager turn down my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Can my manager say no to my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Is it within my manager's rights to deny my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Can my vacation request be denied by my manager?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Is my manager able to refuse my request for vacation time?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Can my manager refuse to approve my vacation request?",
+        "language": "en-us",
+        "intent": "_24_CanManagerDenyVacationRequest",
+        "entities": []
+      },
+      {
+        "text": "Am I at risk of having my vacation request denied by my manager?",
         "language": "en-us",
         "intent": "_24_CanManagerDenyVacationRequest",
         "entities": []
@@ -391,7 +1636,127 @@
         "entities": []
       },
       {
+        "text": "What is the process for scheduling vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How can I arrange my vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What steps should I follow to schedule my vacation?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How do I go about planning my vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What do I need to do to schedule my vacation?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How can I book my vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What is the procedure for requesting vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How should I set up my vacation schedule?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "What is the method for scheduling my vacation days?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
+        "text": "How can I effectively plan my vacation time?",
+        "language": "en-us",
+        "intent": "_25_HowToScheduleVacationTime",
+        "entities": []
+      },
+      {
         "text": "Can I use vacation time to cover tardiness or unexcused absences?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Am I allowed to use vacation time for being late or unexcused absences?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Can I apply my vacation time to make up for tardiness or unauthorized absences?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Is it possible to use vacation hours to cover for lateness or absences without an excuse?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "May I use my vacation days to account for being tardy or having unexcused absences?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Can vacation time be used to compensate for tardiness or absence without notice?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Is it acceptable to use vacation time for covering missed hours due to lateness or unexcused absences?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Can I utilize my vacation time to address issues of tardiness or unauthorized absence?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Am I permitted to use vacation hours to cover for being late or missing work without notice?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Is it allowed to apply vacation time for tardiness or absences that aren’t excused?",
+        "language": "en-us",
+        "intent": "_26_CanVacationTimeCoverTardiness",
+        "entities": []
+      },
+      {
+        "text": "Can I take vacation time to offset my tardiness or unexcused absences?",
         "language": "en-us",
         "intent": "_26_CanVacationTimeCoverTardiness",
         "entities": []
@@ -403,7 +1768,127 @@
         "entities": []
       },
       {
+        "text": "What are the rules regarding vacation time?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "Can you explain the vacation policy?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "What guidelines govern vacation time?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "How is vacation time managed in the company?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "What are the details of the vacation policy?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "Can you provide information on the vacation policy?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "What is the procedure for taking vacation?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "What does the company’s vacation policy entail?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "How does the vacation policy work?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
+        "text": "What are the specifics of the vacation policy?",
+        "language": "en-us",
+        "intent": "_27_VacationPolicy",
+        "entities": []
+      },
+      {
         "text": "Can I take vacation in small increments?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Is it possible for me to take vacation time in short segments?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Can I use my vacation days in smaller amounts?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Am I allowed to take my vacation in brief intervals?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Can vacation time be taken in small portions?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Is it acceptable to take vacation in little increments?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "May I break my vacation time into smaller chunks?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Can I schedule my vacation in short durations?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Is it permitted to take vacation days in smaller increments?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Can I spread my vacation time over several short periods?",
+        "language": "en-us",
+        "intent": "_28_VacationInSmallIncrements",
+        "entities": []
+      },
+      {
+        "text": "Am I able to take my vacation in limited increments?",
         "language": "en-us",
         "intent": "_28_VacationInSmallIncrements",
         "entities": []
@@ -453,26 +1938,26 @@
         ]
       },
       {
-        "text": "I have worked for 5 years",
+        "text": "I worked for 5 years",
         "language": "en-us",
         "intent": "None",
         "entities": [
           {
             "category": "workedYears",
-            "offset": 18,
+            "offset": 13,
             "length": 1
           }
         ]
       },
       {
-        "text": "I have worked for 10 years",
+        "text": "I have worked for more than 4 years",
         "language": "en-us",
         "intent": "None",
         "entities": [
           {
             "category": "workedYears",
-            "offset": 18,
-            "length": 2
+            "offset": 28,
+            "length": 1
           }
         ]
       },
@@ -525,13 +2010,13 @@
         ]
       },
       {
-        "text": "I worked here more than 17 years",
+        "text": "I worked at Sisu more than 17 years",
         "language": "en-us",
         "intent": "None",
         "entities": [
           {
             "category": "workedYears",
-            "offset": 24,
+            "offset": 27,
             "length": 2
           }
         ]
