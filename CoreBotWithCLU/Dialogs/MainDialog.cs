@@ -4,6 +4,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using CoreBotCLU;
 using CoreBotCLU.EntityDetails;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
@@ -58,7 +59,8 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     private async Task<DialogTurnResult> ActStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
     {
       var cluResult = await _cluRecognizer.RecognizeAsync<HumanResource>(stepContext.Context, cancellationToken);
-      switch (cluResult.GetTopIntent().intent)
+      HumanResource.Intent topIntent = cluResult.GetTopIntent().intent;
+      switch (topIntent)
       {
         case HumanResource.Intent._12_VacationPeriod:
           {
@@ -89,10 +91,9 @@ namespace Microsoft.BotBuilderSamples.Dialogs
           }
         default:
           // Catch all for unhandled intents
-          // var didntUnderstandMessageText = $"Sorry, I didn't get that. Please try asking in a different way (intent was {cluResult.GetTopIntent().intent})";
-          var didntUnderstandMessageText = "Sorry, I am not ready for that question.";
-          var didntUnderstandMessage = MessageFactory.Text(didntUnderstandMessageText, didntUnderstandMessageText, InputHints.IgnoringInput);
-          await stepContext.Context.SendActivityAsync(didntUnderstandMessage, cancellationToken);
+          var defaultMessageText = Constants.AnswersForIntent[topIntent];
+          var defaultMessage = MessageFactory.Text(defaultMessageText, defaultMessageText, InputHints.IgnoringInput);
+          await stepContext.Context.SendActivityAsync(defaultMessage, cancellationToken);
           break;
       }
 
