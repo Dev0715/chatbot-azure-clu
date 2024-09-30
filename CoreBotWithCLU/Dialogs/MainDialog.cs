@@ -19,7 +19,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     protected readonly ILogger Logger;
 
     // Dependency injection uses this constructor to instantiate MainDialog
-    public MainDialog(HumanResourceRecognizer cluRecognizer, WorkedYearsDialog vacationPeriodDialog, RestVacationDialog restVacationDialog, ILogger<MainDialog> logger)
+    public MainDialog(HumanResourceRecognizer cluRecognizer, WorkedYearsDialog vacationPeriodDialog, ILogger<MainDialog> logger)
         : base(nameof(MainDialog))
     {
       _cluRecognizer = cluRecognizer;
@@ -27,7 +27,6 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(vacationPeriodDialog);
-      AddDialog(restVacationDialog);
       AddDialog(new PaidVacationEligibilityDialog());
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
@@ -63,22 +62,14 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       switch (topIntent)
       {
         case HumanResource.Intent._12_VacationPeriod:
-          {
-            Console.WriteLine("-----> case HumanResource.Intent._12_VacationPeriod:");
-            var workedYearsDetails = new WorkedYearsDetails()
-            {
-              Years = cluResult.Entities.GetWorkedYears(),
-            };
-            return await stepContext.BeginDialogAsync(nameof(WorkedYearsDialog), workedYearsDetails, cancellationToken);
-          }
         case HumanResource.Intent._13_RestVacation:
           {
-            Console.WriteLine("-----> case HumanResource.Intent._13_RestVacation:");
             var workedYearsDetails = new WorkedYearsDetails()
             {
               Years = cluResult.Entities.GetWorkedYears(),
+              Intent = topIntent,
             };
-            return await stepContext.BeginDialogAsync(nameof(RestVacationDialog), workedYearsDetails, cancellationToken);
+            return await stepContext.BeginDialogAsync(nameof(WorkedYearsDialog), workedYearsDetails, cancellationToken);
           }
         case HumanResource.Intent._18_PaidVacationEligibility:
           {

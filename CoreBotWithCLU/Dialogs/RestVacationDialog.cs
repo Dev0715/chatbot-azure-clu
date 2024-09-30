@@ -66,7 +66,6 @@ namespace Microsoft.BotBuilderSamples.Dialogs
       else
       {
         workedYearsDetails.Years = Years;
-        workedYearsDetails.Intent = HumanResource.Intent._13_RestVacation;
         return await stepContext.EndDialogAsync(workedYearsDetails, cancellationToken);
       }
 
