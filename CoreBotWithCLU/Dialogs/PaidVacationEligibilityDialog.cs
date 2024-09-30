@@ -20,7 +20,6 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     {
       // AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-      // AddDialog(new WorkedYearsDialog(cluRecognizer));
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
         ConfirmStepAsync,

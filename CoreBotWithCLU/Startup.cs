@@ -39,7 +39,7 @@ namespace Microsoft.BotBuilderSamples
       services.AddSingleton<HumanResourceRecognizer>();
 
       // Register the VacationPeriodDialog.
-      services.AddSingleton<VacationPeriodDialog>();
+      services.AddSingleton<WorkedYearsDialog>();
 
       // Register the RestVacationDialog.
       services.AddSingleton<RestVacationDialog>();

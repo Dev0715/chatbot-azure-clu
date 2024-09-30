@@ -25,7 +25,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       // AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-      // AddDialog(new WorkedYearsDialog(cluRecognizer));
+      // AddDialog(new WorkedYearsValidatorDialog(cluRecognizer));
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
         WorkedYearsStepAsync,
@@ -45,7 +45,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         var messageTex = workedYearsDetails.Years == null ? WorkedYearsStepMsgText : RePromptMsgText;
         var promptMessage = MessageFactory.Text(messageTex, messageTex, InputHints.ExpectingInput);
         return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = promptMessage }, cancellationToken);
-        // return await stepContext.BeginDialogAsync(nameof(WorkedYearsDialog), workedYearsDetails.Years, cancellationToken);
+        // return await stepContext.BeginDialogAsync(nameof(WorkedYearsValidatorDialog), workedYearsDetails.Years, cancellationToken);
       }
 
       return await stepContext.NextAsync(workedYearsDetails.Years, cancellationToken);

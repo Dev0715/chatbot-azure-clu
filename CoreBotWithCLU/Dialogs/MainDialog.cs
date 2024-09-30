@@ -19,7 +19,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     protected readonly ILogger Logger;
 
     // Dependency injection uses this constructor to instantiate MainDialog
-    public MainDialog(HumanResourceRecognizer cluRecognizer, VacationPeriodDialog vacationPeriodDialog, RestVacationDialog restVacationDialog, ILogger<MainDialog> logger)
+    public MainDialog(HumanResourceRecognizer cluRecognizer, WorkedYearsDialog vacationPeriodDialog, RestVacationDialog restVacationDialog, ILogger<MainDialog> logger)
         : base(nameof(MainDialog))
     {
       _cluRecognizer = cluRecognizer;
@@ -69,7 +69,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             {
               Years = cluResult.Entities.GetWorkedYears(),
             };
-            return await stepContext.BeginDialogAsync(nameof(VacationPeriodDialog), workedYearsDetails, cancellationToken);
+            return await stepContext.BeginDialogAsync(nameof(WorkedYearsDialog), workedYearsDetails, cancellationToken);
           }
         case HumanResource.Intent._13_RestVacation:
           {
