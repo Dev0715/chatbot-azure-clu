@@ -27,7 +27,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(vacationPeriodDialog);
-      AddDialog(new PaidVacationEligibilityDialog());
+      AddDialog(new ConfirmationDialog());
       AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
       {
                 IntroStepAsync,
@@ -73,12 +73,12 @@ namespace Microsoft.BotBuilderSamples.Dialogs
           }
         case HumanResource.Intent._18_PaidVacationEligibility:
           {
-            Console.WriteLine("-----> case HumanResource.Intent._18_PaidVacationEligibility:");
             var confirmationDetails = new ConfirmationDetails()
             {
               Confirmed = false,
+              Intent = topIntent,
             };
-            return await stepContext.BeginDialogAsync(nameof(PaidVacationEligibilityDialog), confirmationDetails, cancellationToken);
+            return await stepContext.BeginDialogAsync(nameof(ConfirmationDialog), confirmationDetails, cancellationToken);
           }
         default:
           // Catch all for unhandled intents

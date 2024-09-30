@@ -11,12 +11,12 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
-  public class PaidVacationEligibilityDialog : CancelAndHelpDialog
+  public class ConfirmationDialog : CancelAndHelpDialog
   {
     private const string confirmStepMsgText = "Are you a full time employee with at least one year of employment at Sisu?";
 
-    public PaidVacationEligibilityDialog()
-        : base(nameof(PaidVacationEligibilityDialog))
+    public ConfirmationDialog()
+        : base(nameof(ConfirmationDialog))
     {
       // AddDialog(new TextPrompt(nameof(TextPrompt)));
       AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
@@ -43,7 +43,6 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     {
       var confirmationDetails = (ConfirmationDetails)stepContext.Options;
       confirmationDetails.Confirmed = (bool)stepContext.Result;
-      confirmationDetails.Intent = HumanResource.Intent._18_PaidVacationEligibility;
       return await stepContext.EndDialogAsync(confirmationDetails, cancellationToken);
     }
   }

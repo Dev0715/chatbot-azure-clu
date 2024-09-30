@@ -41,9 +41,6 @@ namespace Microsoft.BotBuilderSamples
       // Register the VacationPeriodDialog.
       services.AddSingleton<WorkedYearsDialog>();
 
-      // Register the RestVacationDialog.
-      services.AddSingleton<RestVacationDialog>();
-
       // The MainDialog that will be run by the bot.
       services.AddSingleton<MainDialog>();
 
