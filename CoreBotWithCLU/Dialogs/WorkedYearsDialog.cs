@@ -15,6 +15,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
   {
     private readonly HumanResourceRecognizer _cluRecognizer;
 
+    private const string ErrorYear = "ErrorYear";
     private const string WorkedYearsStepMsgText = "How long have you worked at Sisu?";
     private const string RePromptMsgText = "I am sorry, could you please enter the number of years you have worked here?";
 
@@ -40,7 +41,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
     {
       var workedYearsDetails = (WorkedYearsDetails)stepContext.Options;
 
-      if (workedYearsDetails.Years == null || workedYearsDetails.Years == "Error")
+      if (workedYearsDetails.Years == null || workedYearsDetails.Years == ErrorYear)
       {
         var messageTex = workedYearsDetails.Years == null ? WorkedYearsStepMsgText : RePromptMsgText;
         var promptMessage = MessageFactory.Text(messageTex, messageTex, InputHints.ExpectingInput);
@@ -60,7 +61,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
       if (Years == null)
       {
-        workedYearsDetails.Years = "Error";
+        workedYearsDetails.Years = ErrorYear;
         return await stepContext.ReplaceDialogAsync(InitialDialogId, workedYearsDetails, cancellationToken);
       }
       else
