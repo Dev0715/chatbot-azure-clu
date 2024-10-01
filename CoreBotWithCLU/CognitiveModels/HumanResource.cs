@@ -45,6 +45,43 @@ namespace Microsoft.BotBuilderSamples
       _26_CanVacationTimeCoverTardiness,
       _27_VacationPolicy,
       _28_VacationInSmallIncrements,
+      _29_CanHaveAnotherJob,
+      _30_ImproperJobs, // Follow-up
+      _31_SexuallyHarassed,
+      _32_WhatShouldDo, // Follow-up
+      _33_ProfessionalBoundaries,
+      _34_WhereToFindStandardsConduct,
+      _35_DrugPolicy,
+      _36_SisuHaveRandomDrugTest,
+      _37_WhatCauseRandomTest, // Follow-up
+      _38_WhenTestedForDrugs,
+      _39_AnyOtherTimes, // Follow-up
+      _40_WhatHappensIfDrugTestFailed,
+      _41_HowToReportAnIssue,
+      _42_HowToFileGrievance, // Follow-up
+      _43_WhatIfHavingIssueWithDirectSupervisor,
+      _44_WhatIfNotOkWithDecision, // Follow-up
+      _45_SisuHavePerformanceReview,
+      _46_PerDiemEmployeeGetReview,
+      _47_PartTimeEmployeeGetReview,
+      _48_ReviewBasedOnWhat,
+      _49_IsThereProbationaryPeriod,
+      _50_WhenEligibleForBenefits,
+      _51_CanTerminatedWithoutCause,
+      _52_WhenReceiveSalaryIncrease,
+      _53_ReceiveSalaryIncreaseAfterProbationaryPeriod,
+      _54_GuaranteedSalaryIncreaseAfterFirstYear,
+      _55_RatingCategoriesForReview,
+      _56_PerformanceElements,
+      _57_ThingsCauseFired,
+      _58_HowManyInfractionsBeforeFired,
+      _59_WhatCauseFiredImmediately,
+      _60_FiredAfterLateTwice,
+      _61_InfractionsWarrantCounseling,
+      _62_WhatIfRefuseDoingSthInJD,
+      _63_HowMuchNoticeForQuit,
+      _64_PaidAfterFired,
+      _65_WhatRequiredToTurnInAfterQuit,
       None
     }
 
